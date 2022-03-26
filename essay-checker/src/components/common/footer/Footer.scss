@@ -1,0 +1,17 @@
+@import "../../../assets/mixins";
+
+.et-footer {
+  padding: 16px;
+  background: $main-color;
+  color: $page-background;
+  font-size: 14px;
+
+  & a {
+    color: $page-background;
+    //text-decoration: none; /* no underline */
+
+    &:hover {
+      color: white;
+    }
+  }
+}

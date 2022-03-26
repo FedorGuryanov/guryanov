@@ -1,0 +1,59 @@
+@import "../../assets/mixins";
+
+.et-text-block {
+  @include font-regular;
+  font-size: 18px;
+  padding: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+
+  &__actions {
+    display: flex;
+    margin: 16px 0 16px 0;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+
+    @media screen and (min-width: 860px) {
+      flex-direction: row;
+    }
+
+    &-button {
+      margin: 0 auto 16px 0;
+
+      @media screen and (min-width: 860px) {
+        margin: 0 0 0 auto;
+      }
+    }
+  }
+
+  &__count {
+    text-align: right;
+    margin: 16px 8px 0 8px;
+    font-size: 14px;
+    color: $text-secondary-color;
+  }
+
+  &__input {
+    display: flex;
+    flex-grow: 1;
+    border-radius: $main-border-radius;
+    border: 1px solid lightgray;
+    overflow: hidden;
+    box-shadow: 0 0 4px 1px #80808040 inset;
+    background: white;
+
+    &-area {
+      flex-grow: 1;
+      @include font-regular;
+      font-size: 18px;
+      resize: none;
+      padding: 12px;
+      outline: none;
+      border-radius: $main-border-radius;
+      border: none;
+      line-height: 24px;
+      margin: 0;
+      background: transparent;
+    }
+  }
+}

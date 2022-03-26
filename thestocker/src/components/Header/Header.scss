@@ -1,0 +1,73 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+
+.Header {
+  position: fixed;
+  background: #ffffffee;
+  height: 60px;
+  width: 100%;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &._scroll {
+    box-shadow: 0 0 14px 0 rgb(0 2 12 / 10%);
+  }
+
+  &__reddit {
+    @include font-bold;
+    font-size: 14px;
+    margin-left: 32px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+
+    ._scroll & {
+      opacity: 1;
+    }
+
+    @media screen and (max-width: $ipad) {
+      margin-left: 20px;
+    }
+
+    @media screen and (max-width: $iphone) {
+      margin-left: 16px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      color: rgba(60, 80, 100, 0.95);
+    }
+
+    span {
+      margin-right: 8px;
+
+      @media screen and (max-width: $iphone) {
+        display: none;
+      }
+    }
+  }
+
+  &__wrapper {
+    height: 60px;
+  }
+
+  &__logo {
+    width: 200px;
+    height: 100%;
+    background: url("../../../public/logo.png") no-repeat center;
+    background-size: contain;
+    margin-left: auto;
+    margin-right: 32px;
+
+    @media screen and (max-width: $ipad) {
+      margin-right: 20px;
+    }
+
+    @media screen and (max-width: $iphone) {
+      margin-right: 16px;
+    }
+  }
+}

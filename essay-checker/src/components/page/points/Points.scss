@@ -1,0 +1,51 @@
+@import "../../../assets/mixins";
+
+.et-page-points {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 64px;
+
+  @media screen and (min-width: 860px) {
+    flex-direction: row;
+  }
+
+  &__item {
+    background: white;
+    border-radius: $main-border-radius;
+    border: 1px solid lightgray;
+    padding: 16px;
+    margin-top: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @media screen and (min-width: 860px) {
+      margin-top: 0;
+      width: 30%;
+    }
+
+    & svg {
+      width: 76px;
+      height: 76px;
+    }
+
+    &-title {
+      margin: 16px 0;
+      @include font-bold;
+      font-size: 20px;
+    }
+
+    &-text {
+      margin-top: auto;
+      @include font-regular;
+      font-size: 18px;
+    }
+  }
+}

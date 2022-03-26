@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Bindtape</title>
+        <link rel="stylesheet" type="text/css" href="public/main.css">
+        <link rel="apple-touch-icon" sizes="57x57" href="public/icon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="public/icon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="public/icon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="public/icon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="public/icon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="public/icon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="public/icon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="public/icon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="public/icon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="public/icon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="public/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="public/icon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="public/icon/favicon-16x16.png">
+        <link rel="manifest" href="public/icon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="public/icon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <script src="public/jquery-3.3.1.min.js"></script>
+        <script>
+            var sdegree = 0;
+
+            $(window).scroll(function() {
+                sdegree = sdegree - 3;
+                var srotate = "rotate(" + sdegree + "deg)";
+                $(".bt-header__logo_wheel").css({"-moz-transform" : srotate, "-webkit-transform" : srotate});
+            });
+        </script>
+    </head>
+    <body>
+        <div class="bt-header">
+            <div class="bt-header__overlay">
+                <div  class="bt-header__overlay_name _noselect">
+                    BINDTAPE
+                    <div  class="bt-header__overlay_description _noselect">
+                        Music Social Network
+                    </div>
+                </div>
+            </div>
+            <img class="bt-header__logo" src="public/images/web-icon.png" height="90"/>
+            <img class="bt-header__logo_wheel _left" src="public/images/wheel1.png" height="23.5"/>
+            <img class="bt-header__logo_wheel _right" src="public/images/wheel2.png" height="23.5"/>
+        </div>    
+        <div class="bt-content__top-prefix">
+            
+        </div>
+        <div class="bt-content">
+            <div class="bt-content__block _blue">
+                <div class="bt-content__block_text">
+                    Bindtape is an app for sharing the entire musical experience by merging images, text and playlists. <br> Now you can instantly share your music and art experience with a maximum number of friends.
+                    
+                    <br>
+                    <br>
+                    <img src="public/images/appbadge.png" height="60"/>
+                    <br>
+                    <span class="_text-small">
+                        Bindtape is integrated with Apple Music<br>and you need Apple Music subscription to use it.<br><br>
+                        Release in June 2018.
+                    </span>
+                </div>
+            </div>
+                
+            <div class="bt-content__block _sea">
+                <div class="bt-content__block_wrapper">
+                    <div class="bt-content__block_text_left">
+                        <div>
+                            Bindtape lets users share the mood of the moment quickly and easily. It connects to the music streaming services the user is subscribed to. <br><br> Currently, Bindtape is integrated with IOS and Apple Music. <br><br> Bindtape posts include images and captions that enrich the music sharing. Bindtape friend feed is a stream of synesthetic experiences.
+                        </div>
+                    </div>
+                    <img class="bt-content__block_image_right" src="public/images/iphone.png" width="280"/>
+                </div>
+            </div>
+        </div>
+        <div class="bt-bottom-bar">
+            <div class="bt-bottom-bar__block">
+                Bindtape 2018 &#x24B8;
+                <br>
+            </div>
+            <div class="bt-bottom-bar__block _right">
+                Contacts:
+                <br>
+                <a style="color: #DDDDDD" href="mailto:bindtapemusic@gmail.com">bindtapemusic@gmail.com</a>
+            </div>
+    </body>
+</html>

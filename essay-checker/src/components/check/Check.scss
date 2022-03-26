@@ -1,0 +1,211 @@
+@import "../../assets/mixins";
+
+.et-text-popup {
+    display: flex;
+    width: 100%;
+    background: white;
+    color: $text-color;
+    flex-direction: column;
+    cursor: default;
+
+    @media screen and (min-width: 860px) {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    &__theme {
+        background: white;
+        padding: 16px 16px 32px 16px;
+        font-size: 16px;
+        line-height: 20px;
+
+        &-title {
+            font-size: 24px;
+            color: $text-secondary-color;
+            margin-bottom: 16px;
+        }
+
+        &-img {
+            width: 100%;
+            max-width: 520px;
+            margin: 16px 0;
+        }
+    }
+
+    &__header-text {
+        margin: auto 0 auto auto;
+        color: white;
+
+        @media screen and (min-width: 860px) {
+            margin: auto 0;
+        }
+        //font-size: 18px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        @media screen and (min-width: 860px) {
+            flex-direction: row;
+            height: calc(100vh - 64px);
+        }
+    }
+
+    &__left {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 16px;
+        overflow: visible;
+        display: flex;
+        flex-direction: row;
+
+        @media screen and (min-width: 860px) {
+            overflow: auto;
+            height: calc(100vh - 64px);
+        }
+
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 32px;
+            //white-space: pre-wrap;
+
+            &._checking {
+                opacity: 0.5;
+            }
+        }
+
+        &-right {
+            @media screen and (min-width: 860px) {
+                min-width: calc(55vw + 16px);
+                max-width: calc(55vw + 16px);
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__text {
+        &-extra {
+            &-top {
+                font-size: 0.8em;
+                text-align: center;
+                border-top: 2px solid $red-alert;
+                color: $red-alert;
+                @include font-bold;
+                margin-top: 16px;
+
+                &::after {
+                    content: 'ТЕКСТ НИЖЕ НЕ БУДЕТ УЧИТЫВАТЬСЯ ПРИ ПРОВЕРКЕ';
+                }
+            }
+
+            &-inner {
+                padding: 16px;
+            }
+        }
+
+        &-part {
+            //padding: 8px 16px;
+            line-height: 21px;
+
+            & p {
+                margin-top: 0;
+                margin-bottom: 0;
+                text-indent: 8px;
+                //display: flex;
+            }
+
+            & ._hidden {
+                visibility: hidden;
+
+                &._empty {
+                    height: 0;
+                    overflow: hidden;
+                    max-height: 0;
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    &__right {
+        overflow: auto;
+        background: $page-background;
+
+        &-inner {
+            padding-right: 16px;
+            padding-left: 16px;
+
+            @media screen and (min-width: 860px) {
+                padding-left: 8px;
+            }
+        }
+
+        @media screen and (min-width: 860px) {
+            width: 55vw;
+            height: calc(100vh - 64px);
+            top: 64px;
+            right: 0;
+            position: fixed;
+            border-left: 1px solid lightgray;
+        }
+    }
+
+    &__mark {
+        &-caption {
+            @include font-bold;
+            padding: 16px 16px 8px 16px;
+        }
+    }
+
+    &__list {
+        border-radius: $main-border-radius;
+        overflow: hidden;
+        margin-bottom: 16px;
+
+        &-item {
+            padding: 8px 16px;
+        }
+    }
+
+    &__info {
+        border-radius: $main-border-radius;
+        overflow: hidden;
+        background: $opacity-black-bg;
+        color: white;
+        padding: 16px;
+        margin: 16px 0;
+    }
+
+    &__user-hint {
+        border-radius: $main-border-radius;
+        background: $page-background;
+        color: $main-color;
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+
+    &__result {
+        padding: 32px 16px 16px 16px;
+        @include font-bold;
+        font-size: 1.2em;
+
+        &-value {
+            padding: 0 4px 0 8px;
+        }
+    }
+
+    &__warning {
+        background: $red-alert;
+        color: white;
+        @include font-bold;
+        padding: 16px;
+        border-radius: $main-border-radius;
+    }
+
+    &__note {
+        padding: 16px 16px 32px 16px;
+    }
+}

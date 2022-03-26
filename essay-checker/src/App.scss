@@ -1,0 +1,83 @@
+@import "assets/mixins";
+
+.App {
+  text-align: center;
+
+  &-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+}
+
+body {
+  background: white;
+  min-height: 100vh;
+}
+
+#root .r6o-editor {
+  width: 300px;
+  z-index: 999;
+  top: var(--current-scroll, 0);
+  left: 0;
+}
+
+#root .r6o-widget.comment .r6o-editable-text, #root .r6o-widget.comment .r6o-readonly-comment {
+  padding-right: 32px;
+}
+
+#root {
+  .r6o-widget.r6o-tag ul.r6o-taglist li .r6o-delete-wrapper {
+    background-color: $red-alert;
+  }
+
+  .r6o-btn {
+    background: $main-color;
+    border: 1px solid $main-color;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &.outline {
+      background-color: transparent;
+      color: $main-color;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .r6o-widget.comment .r6o-arrow-down.r6o-menu-open {
+    border-color: $main-color;
+  }
+
+  .r6o-editor .r6o-footer .r6o-btn.delete-annotation {
+    background-color: transparent;
+    border: none;
+    color: $red-alert;
+
+    &:hover {
+      background-color: $red-alert;
+      color: white;
+    }
+  }
+
+  .r6o-editor *:not(.r6o-nodrag,.r6o-btn,input,textarea) {
+    cursor: default;
+  }
+
+  & .r6o-editor input, & .r6o-editor textarea {
+    cursor: text !important;
+  }
+
+  .r6o-annotation._is-auto {
+    background-color: rgba(255,105,90,.2);
+  }
+
+  .r6o-annotation._is-key {
+    background-color: rgba(139, 212, 38, 0.2);
+    border-bottom: 2px solid green;
+  }
+}
+

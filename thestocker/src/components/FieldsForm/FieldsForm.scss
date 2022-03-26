@@ -1,0 +1,72 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+
+.FieldsForm {
+  &__wrapper {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &._used-only .FieldsForm__input._unused {
+      display: none;
+    }
+  }
+
+  &__company {
+    margin-top: 8px;
+    display: flex;
+    font-size: 14px;
+    color: $gray-text;
+  }
+
+  &__input {
+    width: 33.333%;
+    text-align: start;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $ipad) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: $iphone) {
+      width: 100%;
+    }
+
+    &._unused {
+      opacity: 0.5;
+    }
+
+    &-key {
+      font-size: 16px;
+      font-weight: 600;
+      color: $active-color;
+      width: fit-content;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      margin-bottom: -8px;
+      z-index: 2;
+
+      &-name {
+        font-size: 12px;
+        color: $gray-text;
+        margin-top: -2px;
+        line-height: 12px;
+        font-weight: normal;
+        margin-left: 6px;
+      }
+    }
+
+    &-value {
+      margin-top: auto;
+      --chakra-sizes-10: 32px;
+
+      &._error input {
+        color: $red-error;
+      }
+    }
+  }
+}

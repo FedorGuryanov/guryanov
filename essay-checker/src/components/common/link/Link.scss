@@ -1,0 +1,10 @@
+@import "../../../assets/mixins";
+
+a.et-link {
+  color: $main-link-color;
+  text-decoration: none; /* no underline */
+
+  &:hover {
+    color: $main-link-hover-color;
+  }
+}

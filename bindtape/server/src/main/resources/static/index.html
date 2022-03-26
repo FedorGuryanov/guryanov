@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>Bindtape</title>
+        <link rel="stylesheet" type="text/css" href="public/main.css">
+        <link rel="apple-touch-icon" sizes="57x57" href="public/icon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="public/icon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="public/icon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="public/icon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="public/icon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="public/icon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="public/icon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="public/icon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="public/icon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="public/icon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="public/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="public/icon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="public/icon/favicon-16x16.png">
+        <link rel="manifest" href="public/icon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="public/icon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <script src="public/jquery-3.3.1.min.js"></script>
+        <script>
+            var sdegree = 0;
+
+            $(window).scroll(function() {
+                sdegree = sdegree - 3;
+                var srotate = "rotate(" + sdegree + "deg)";
+                $(".bt-header__logo_wheel").css({"-moz-transform" : srotate, "-webkit-transform" : srotate});
+            });
+        </script>
+    </head>
+    <body>
+        <div class="bt-header">
+            <div class="bt-header__overlay">
+                <div  class="bt-header__overlay_name _noselect">
+                    Bindtape
+                    <div  class="bt-header__overlay_description _noselect">
+                        Colour Your Music
+                    </div>
+                </div>
+            </div>
+            <img class="bt-header__logo" src="public/images/web-icon.png" height="90"/>
+            <img class="bt-header__logo_wheel _left" src="public/images/wheel1.png" height="24"/>
+            <img class="bt-header__logo_wheel _right" src="public/images/wheel2.png" height="24"/>
+        </div>    
+        <div class="bt-content__top-prefix">
+            
+        </div>
+        <div class="bt-content">
+            <div class="bt-content__block _blue">
+                <div class="bt-content__block_text">
+                    Bindtape is an app for sharing <br> the entire experience of music and art <br> by merging image, text, playlist and colour.
+                    <br><br>
+                    Now you can instantly share your music and art experience with a maximum number of friends.
+                    
+                    <br>
+                    <br>
+                    <a href="https://itunes.apple.com/us/app/bindtape/id1384065636?mt=8"><img src="public/images/appbadge.png" height="60"/></a>
+                    <br>
+                    <span class="_text-small">
+                        Application is integrated with Apple Music<br>and you need Apple Music subscription to use it.
+                    </span>
+                </div>
+            </div>
+                
+            <div class="bt-content__block _sea">
+                <div class="bt-content__block_wrapper">
+                    <div class="bt-content__block_text_left">
+                        <div>
+                            Bindtape lets users share<br>the mood of the moment<br>quickly and easily.<br>It connects to Apple Music and extracts songs and playlists legally.
+                            <br><br>
+                            Bindtape posts include images,<br>captions and colour backgrounds<br>that enrich the music sharing.
+                        </div>
+                    </div>
+                    <img class="bt-content__block_image_right" src="public/images/iphone.gif" width="280"/>
+
+                </div>
+            </div>
+
+            <div class="bt-content__block _blue">
+                <div class="bt-content__block_text">
+                    Follow us on social networks:
+                    <br><br>
+                    <a href="https://www.producthunt.com/posts/bindtape" class="social-link"><img src="public/images/producthunt.png" height="50px" width="50px"/></a>
+                    <a href="https://www.facebook.com/bindtape" class="social-link"><img src="public/images/facebook.png" height="50px" width="50px"/></a>
+                    <a href="https://www.instagram.com/bindtape" class="social-link"><img src="public/images/instagram.png" height="50px" width="50px"/></a>
+                </div>
+            </div>
+
+            <div class="bt-content__block _sea">
+                <div class="bt-content__block_wrapper">
+                    <img class="bt-content__block_image_right" src="public/images/iphoneX.gif" width="280"/>
+                    <div class="bt-content__block_text_right">
+                        <div>
+                            Colour is emotional, music is emotional. Bindtape lets you share your impressions and emotions in style, quickly and comfortably.
+                            <br><br>
+                            Find friends and share music impressions with them. Bindtape friend feed is a stream of synesthetic experiences.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bt-bottom-bar__wrapper">
+            <div class="bt-bottom-bar">
+                <div class="bt-bottom-bar__block">
+                    Contacts:
+                    <br>
+                    <a style="color: #DDDDDD" href="mailto:info@bindtape.com">info@bindtape.com</a>
+                </div>
+                <div class="bt-bottom-bar__block _right">
+                    Bindtape 2018 &#x24B8;
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

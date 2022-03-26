@@ -1,0 +1,47 @@
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/static/fonts/Gilroy-Regular.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/static/fonts/Gilroy-Bold.woff") format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin font-regular {
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin font-bold {
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+$main-border-radius: 10px;
+
+$select-color: #ffffff;
+$button-hover-color: #fafcf8;
+$text-color: #121212;
+$select-hover-color: #fafcf8;
+$text-secondary-color: #6c6f6d;
+$info-background-color: #6c6f6d;
+$main-gray-color: #e2f8e2;
+$main-color: #324F40;
+$main-color-hover: #446553;
+$active-color: #42843d;
+$main-link-color: #08b787;
+$main-link-hover-color: #03d099;
+$info-alert: rgb(255, 232, 82);
+$red-alert: #D0342C;
+$page-background: #f6f1ea;//#fafcfe;
+$opacity-black-bg: #000000a9;

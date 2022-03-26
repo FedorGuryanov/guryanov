@@ -1,0 +1,41 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+
+.BottomPromo {
+  &__wrapper {
+    @include font-bold;
+    font-size: 24px;
+    margin: 24px auto 72px auto;
+    max-width: 1200px;
+    padding: 8px 32px;
+
+    @media screen and (max-width: $ipad) {
+      padding: 8px 20px;
+    }
+
+    @media screen and (max-width: $iphone) {
+      padding: 8px 16px;
+    }
+
+    & .carousel-root {
+      max-width: 720px;
+
+      & .control-dots {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__ask {
+    color: $lightgray-text;
+
+    &._top {
+      margin-top: 32px;
+    }
+  }
+
+  &__join {
+    margin-top: 8px;
+    color: $active-color;
+  }
+}
